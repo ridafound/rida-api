@@ -1,0 +1,11 @@
+[33mcommit 4b58efc2d702f3b55ad5900f9ca742443fe5b91f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: rida <omermuhd9@gmail.com>
+Date:   Mon Feb 16 16:16:42 2026 +0100
+
+    Fix start script for Render deployment
+
+[33mcommit e25d0c808dd27241e85a9c52de03c45fbe983f05[m
+Author: rida <omermuhd9@gmail.com>
+Date:   Mon Feb 16 15:34:52 2026 +0100
+
+    initial commit

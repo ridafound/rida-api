@@ -9,7 +9,7 @@ const notFoundMiddleware = require('./src/middleware/not-found')
 
 const helmet = require('helmet');
 const cors = require('cors');
-const xss = require('xss-clean');
+//const xss = require('xss-clean');
 const rateLimiter = require('express-rate-limit');
 
 
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.json());
+
 
 app.set('trust proxy', 1);
 app.use(
@@ -32,7 +32,7 @@ app.use(
 app.use(express.json());
 app.use(helmet());
 app.use(cors());
-app.use(xss());
+//app.use(xss());
 
 // app.use('/api/service',data)
 

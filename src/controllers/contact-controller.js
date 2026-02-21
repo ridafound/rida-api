@@ -4,8 +4,23 @@ const {BadRequestError,NotFoundError}= require('../errors/index')
 
 const createContacts = async (req, res) => {
   
-    const contact = await Contact.create(req.body)
-    res.status(StatusCodes.CREATED).json({contact})
+    const { name, email, message } = req.body;
+
+  if (!name || !email || !message) {
+    throw new BadRequestError('Name, email and message are required');
+  }
+
+  const contact = 
+  await Contact.create({
+    name,
+    email,
+    message,
+  });
+
+    res.status(StatusCodes.CREATED).json({
+      success: true,
+      message: 'Messages sent successefully'
+    })
 
 }
 

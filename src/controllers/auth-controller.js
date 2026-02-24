@@ -6,8 +6,8 @@ const { StatusCodes } = require('http-status-codes')
 
 
 const register = async (req, res) => {
-  const { name, email, password } = req.body
-  if (!name || !email || !password) {
+  const { username, email, password } = req.body
+  if (!username || !email || !password) {
     throw new BadRequestError('please provide name,email and password')
   }
 

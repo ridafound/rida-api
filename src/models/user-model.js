@@ -3,9 +3,9 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 const UserSchema = new mongoose.Schema({
-  name: {
+  username: {
     type: String,
-    required: [true, 'please provide name'],
+    required: [true, 'please provide username'],
     minlength: 3,
     maxlength: 50
   },
@@ -33,7 +33,7 @@ UserSchema.pre('save', async function () {
 
 UserSchema.methods.createJWT = function () {
   return jwt.sign(
-    { userId: this._id, name: this.username },
+    { userId: this._id, username: this.username },
     process.env.JWT_SECRET,
     { expiresIn:process.env.JWT_LIFETIME}
   )

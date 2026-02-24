@@ -16,7 +16,6 @@ const register = async (req, res) => {
 
   res.status(StatusCodes.CREATED).json({
     success: true,
-    user: { username: user.username },
     token,
   })
 

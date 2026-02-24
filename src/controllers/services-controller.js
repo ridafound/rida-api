@@ -4,10 +4,10 @@ const { BadRequestError,NotFoundError } = require('../errors')
 const Services = require('../models/service-model')
 
 const createService = async (req, res) => {
-  const { title, price } = req.body
+  const { title, icon, desc } = req.body
 
-  if (!title || !price) {
-    throw new BadRequestError('Please provide title and price')
+  if (!title || !icon || !desc ) {
+    throw new BadRequestError('Please provide title,icon and desc')
   }
 
   const service = await Services.create(req.body)

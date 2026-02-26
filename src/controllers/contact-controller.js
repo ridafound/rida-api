@@ -34,7 +34,6 @@ const getAllMessages = async (req, res) => {
     queryObject.responded = responded === "true";
   }
 
-
   const messages = await Contact.find(queryObject).sort({ createdAt: -1 })
 
   res.status(StatusCodes.OK).json({
